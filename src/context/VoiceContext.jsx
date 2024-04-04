@@ -92,7 +92,7 @@ export const VoiceProvider = ({ children }) => {
   } = useSpeechRecognition({ commands, continuous: true });
 
   if (!browserSupportsSpeechRecognition) {
-    alert('Your browser does not support speech recognition software! Please try again with a different browser.');
+    console('Your browser does not support speech recognition software! Please try again with a different browser.');
   }
 
   const voicePageNavigator = (pageName) => {
@@ -101,7 +101,7 @@ export const VoiceProvider = ({ children }) => {
       voiceResponse(`Navigating to ${pageName} page...`);
       router.push(page.pagePath);
     } else {
-      alert('Page not found!');
+      console.log('Page not found!');
     }
   }
 
