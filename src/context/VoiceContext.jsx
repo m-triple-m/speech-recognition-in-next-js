@@ -92,7 +92,7 @@ export const VoiceProvider = ({ children }) => {
   } = useSpeechRecognition({ commands, continuous: true });
 
   if (!browserSupportsSpeechRecognition) {
-    console('Your browser does not support speech recognition software! Please try again with a different browser.');
+    console.log('Your browser does not support speech recognition software! Please try again with a different browser.');
   }
 
   const voicePageNavigator = (pageName) => {
